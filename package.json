@@ -1,0 +1,44 @@
+{
+  "name": "septa-fare-calculator",
+  "version": "0.0.1",
+  "description": "A handy fare calculator for SEPTA's Regional Rail",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arti5m/code-challenges.git"
+  },
+  "author": "Andre Chappelle <ajchappelle@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arti5m/code-challenges/issues"
+  },
+  "homepage": "https://github.com/arti5m/code-challenges#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.1",
+    "eslint": "^4.19.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-stylus": "^2.7.0",
+    "stylelint": "7.13.0",
+    "stylelint-declaration-strict-value": "^1.0.4",
+    "stylelint-order": "^0.8.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}

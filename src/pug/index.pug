@@ -1,0 +1,109 @@
+doctype html
+html(lang=en)
+	head
+		meta(
+			name='viewport'
+			content='width=device-width, initial-scale=1.0'
+		)
+		meta(charset='UTF-8')
+		title SEPTA Regional Rail Fair Calculator
+		link(
+			type='text/css'
+			rel='stylesheet'
+			href='css/site.css'
+		)
+		script(
+			type='text/javascript'
+			src='https://code.jquery.com/jquery-2.2.4.min.js' 
+			integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=' 
+			crossorigin='anonymous'
+		)
+		script(
+			type='text/javascript'
+			src='js/site.js'
+		)
+body
+	a(href='#maincontent') Skip to main content
+	main#maincontent
+		
+		.c-fare-calculator
+
+			.c-fare-calculator__header.o-block--brand-neutral--dark
+				h1.c-fare-calculator__title.o-title--secondary.o-type--offset
+					img.o-mark(src='/imgs/SEPTA.png' alt='')
+					span.text Regional Rail Fares
+
+			form#calculator-form.c-fare-calculator__form.o-form.o-form--large(
+				action=''
+				data-role='calculator-form'
+			)
+
+				fieldset.o-form__field-wrapper.o-form__field-wrapper--select(data-role='select-wrapper')
+					.o-input__wrapper
+						label.o-label.o-label--default.o-label--strong(for='destination').
+							Where are you going?
+						select.o-input.o-imput--select(
+							id='destination' 
+							name='destination'
+							data-role='destination-select'
+						)
+
+				fieldset.o-form__field-wrapper.o-form__field-wrapper--select(data-role='select-wrapper')
+					.o-input__wrapper
+						label.o-label.o-label--default.o-label--strong(for='when').
+							When are you riding?
+						select.o-input.o-imput--select(
+							id='when' 
+							name='when'
+							data-role='when-select'
+						)
+						.o-description
+							span.text(data-role="when-helper-text").
+								Helper text that explains the options above
+				
+				fieldset.o-form__field-wrapper.o-form__field-wrapper--radios(data-role='radios-wrapper')
+					legend.o-label.o-label--default.o-label--strong.
+						Where will you purchase the fare?
+					
+					.o-input__wrapper
+						input.o-input.o-imput--radio(
+							type='radio'
+							id='kiosk' 
+							name='purchaseLocation'
+							data-role='purchase-location-select'
+						)
+						label.o-label.o-label--inline.o-label--strong(for='kiosk').
+							Station Kiosk?
+
+					.o-input__wrapper
+						input.o-input.o-imput--radio(
+							type='radio'
+							id='onboard' 
+							name='purchaseLocation'
+							data-role='purchase-location-select'
+						)
+						label.o-label.o-label--inline.o-label--regular(for='onboard').
+							Onboard?
+
+				fieldset.o-form__field-wrapper.o-form__field-wrapper--number(data-role='number-wrapper')
+					.o-input__wrapper
+						label.o-label.o-label--default.o-label--strong(for='when').
+							How many rides will you need?
+						input.o-input.o-imput--number(
+							type='number'
+							id='qty' 
+							name='qty'
+							data-role='qty'
+						)
+			//- Form end
+
+			.c-fare-calculator__footer.o-block--brand-neutral--dark
+				h2.c-fare-calculator__footer-title.o-title--secondary Your fare will cost
+				p.c-fare-calculator__total.o-title--primary.o-type--offset
+					span.text(dat-role='calculator-total') $0.00
+
+
+
+			
+
+
